@@ -18,6 +18,14 @@ def contact():
 def all_courses():
     return {'data':{'page':'all courses list'}}
 
+@app.get('/course/unpublished')
+def unpublished():
+    return {'data':'unpublished'}
+
 @app.get('/course/{id}')
 def single_course(id:int):
     return {'courseID':id}
+
+@app.get('/course/{id}/comments')
+def comments():
+    return {'data':{'comments':'coments'}}
